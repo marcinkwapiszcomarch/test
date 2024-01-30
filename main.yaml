@@ -4,6 +4,5 @@ type: Opaque
 metadata:
   name: test
   namespace: argocd
-stringData:
-  test.yaml: |
-    TEST:  <path:keyvault#test>
+data:
+  test: <path:keyvault#test>
