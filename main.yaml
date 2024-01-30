@@ -6,4 +6,4 @@ metadata:
   namespace: argocd
 stringData:
   test.yaml: |
-    TEST:  <path:kv/test>
+    TEST:  <path:keyvault#test>
