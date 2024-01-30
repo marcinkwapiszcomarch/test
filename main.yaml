@@ -5,4 +5,4 @@ metadata:
   name: test
   namespace: argocd
 data:
-  test: <path:keyvault#test>
+  test: <path:keyvault#test#1a4057773ea843e890f9cdb49ad3e1e8>
