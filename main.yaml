@@ -4,5 +4,5 @@ type: Opaque
 metadata:
   name: test
   namespace: argocd
-data:
+stringData:
   test: "<mkwapisz-aks-keyvault:keyvault#password>"
