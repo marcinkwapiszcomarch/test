@@ -5,4 +5,4 @@ metadata:
   name: test
   namespace: argocd
 data:
-  test: <mkwapisz-aks-keyvault:keyvault#password>
+  test: "<mkwapisz-aks-keyvault:keyvault#password>"
