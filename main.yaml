@@ -6,3 +6,6 @@ metadata:
   namespace: argocd
 stringData:
   test-value: <mkwapisz-aks-keyvault:keyvault#password>
+  test-value2: <path:mkwapisz-aks-keyvault#password>
+  test-value3: "<mkwapisz-aks-keyvault:keyvault#password>"
+  test-value4: "<path:mkwapisz-aks-keyvault#password>"
