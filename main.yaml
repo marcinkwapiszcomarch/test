@@ -9,3 +9,12 @@ stringData:
   test-value2: <path:mkwapisz-aks-keyvault#password>
   test-value3: "<mkwapisz-aks-keyvault:keyvault#password>"
   test-value4: "<path:mkwapisz-aks-keyvault#password>"
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: test2
+  namespace: argocd
+stringData:
+  test-value: <global:cluster.name>
