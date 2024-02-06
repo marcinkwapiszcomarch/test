@@ -18,3 +18,14 @@ metadata:
   namespace: argocd
 stringData:
   test-value: <global:cluster.name>
+---
+apiVersion: v1
+kind: Secret
+type: Opaque
+metadata:
+  name: test3
+  namespace: argocd
+  annotations:
+    avp.kubernetes.io/path: "keyvault"
+stringData:
+  test-value: <password>
