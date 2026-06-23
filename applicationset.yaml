@@ -1,12 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations:
+    argocd.argoproj.io/manifest-generate-paths: .
   name: global-parameters-appset
   namespace: argocd
 spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
+  project: cdi-base
   source:
     path: global-parameters
     repoURL: ssh://git@github.com/marcinkwapiszcomarch/test
@@ -16,7 +19,6 @@ spec:
         - name: values-files
           array:
             - deployments/values.yaml
-  project: cdi-base
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
