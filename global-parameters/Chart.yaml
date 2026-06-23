@@ -4,4 +4,6 @@ description: Simple Helm chart for testing global parameters
 type: application
 version: 0.1.0
 appVersion: "1.0.0"
+annotations:
+  chart.requirements/argocd-vault-plugin: "true"
 

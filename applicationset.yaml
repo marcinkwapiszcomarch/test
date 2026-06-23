@@ -3,12 +3,18 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/manifest-generate-paths: .
-  name: global-parameters-appset
+  labels:
+    com.comarch.configuration/layer: system
+  name: global-parameters-app
   namespace: argocd
 spec:
   destination:
-    namespace: default
+    namespace: test
     server: https://kubernetes.default.svc
+  info:
+    - name: description
+      value: |
+        The test instance
   project: cdi-base
   source:
     path: global-parameters
@@ -22,3 +28,7 @@ spec:
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
+    managedNamespaceMetadata:
+      labels:
+        com.comarch.configuration/deployment-type: tenant
+        com.comarch.configuration/layer: system
