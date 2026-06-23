@@ -1,3 +1,1 @@
-# AVP will substitute the placeholder below with the actual value from the secret backend
-# Vault path example: secret/data/global, key: cluster.name
 clusterName: <global:cluster.name>
