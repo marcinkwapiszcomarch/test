@@ -5,6 +5,6 @@ metadata:
   name: test2
   namespace: argocd
 stringData:
-  test-value: <global:cluster.name>
+  test-value: <path:global#cluster.name>
 
 
